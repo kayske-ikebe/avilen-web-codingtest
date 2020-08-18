@@ -33,6 +33,7 @@
         xhr.send(pattern);
         xhr.onreadystatechange = function () {
             const res = JSON.parse(xhr.responseText);
+            console.log(res.data);
             if (xhr.readyState === 4 && xhr.status === 200) {
                 resultTextbox.innerHTML = res.data;
             }
